@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Yu-Gi-Oh — MVP</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Yu-Gi-Oh — MVP (versão DIO.me)</h1>
+    <div class="controls">
+      <button id="btn-new">Novo jogo</button>
+      <button id="btn-endturn">Finalizar turno</button>
+    </div>
+  </header>
+
+  <section class="board">
+    <div class="player" id="player-0">
+      <div class="player-header">
+        <div>
+          <div class="big">Jogador</div>
+          <div class="lp">LP: <span id="lp-0">8000</span></div>
+        </div>
+        <div class="info">
+          <div>Deck: <span id="deck-0">0</span></div>
+          <div>Hand: <span id="hand-count-0">0</span></div>
+        </div>
+      </div>
+
+      <div>Hand</div>
+      <div class="zone" id="hand-0"></div>
+
+      <div class="zone-title">Campo (monstros)</div>
+      <div class="zone" id="field-0"></div>
+    </div>
+
+    <div class="player" id="player-1">
+      <div class="player-header">
+        <div>
+          <div class="big">Oponente</div>
+          <div class="lp">LP: <span id="lp-1">8000</span></div>
+        </div>
+        <div class="info">
+          <div>Deck: <span id="deck-1">0</span></div>
+          <div>Hand: <span id="hand-count-1">0</span></div>
+        </div>
+      </div>
+
+      <div>Hand (oculta)</div>
+      <div class="zone" id="hand-1"></div>
+
+      <div class="zone-title">Campo (monstros)</div>
+      <div class="zone" id="field-1"></div>
+    </div>
+  </section>
+
+  <section class="bottom">
+    <div>
+      <div class="log" id="log"></div>
+    </div>
+    <div class="sidebar">
+      <div>Turn: <span id="turn-player">Jogador</span></div>
+      <div>Comandos rápidos</div>
+      <div class="controls">
+        <button id="btn-draw">Comprar</button>
+        <button id="btn-play-random">Jogar monstro aleatório</button>
+        <button id="btn-attack">Atacar (monstro 1 -> monstro 1)</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="game.js"></script>
+</body>
+</html>
